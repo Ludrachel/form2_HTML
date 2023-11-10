@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+    <link rel="stylesheet" href="formularios.css">
+</head>
+<body>
+    <h1>Formulário de inscrição e  Feedback</h1>
+    <form action="http://exemplo.com/inscricao" method="post">
+        <ul>
+            <li>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" nome="Insira seu nome" required />
+            </li>
+            <li>
+                <label for="mail">Email:</label>
+                <input type="email" id="mail" name="isira seu email" required />
+            </li>
+            <li>
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" nome="Insira sua idade" required/>
+            </li>
+            <li>
+                <label for="senha">
+                    <span>Senha: </span>
+                    <strong><span aria-label="required">*</span></strong>
+                </label>
+                <input maxlength="12" type="password" id="senha" name="Insira uma senha" required />
+            </li>
+            <br>
+            <fieldset>
+                <p>Qual o seu nível de satisfação com o nosso serviço ?</p>
+                <ul>
+                    <li>
+                        <label for="opcao_1">
+                            <input type="radio" id="opcao_1" name="satisfacao" value="satisfeito"/> Satisfeito
+                        </label>
+                    </li>
+                    <li>
+                        <label for="opcao_2">
+                            <input type="radio" id="opcao_2" name="satisfacao" value="neutro"/> Neutro
+                        </label>
+                    </li>
+                    <li>
+                        <label for="opcao_3">
+                            <input type="radio" id="opcao_3" name="satisfacao"
+                            value="insatisfeito"/> Insatisfeito
+                        </label>
+                    </li>
+                </ul>
+                </fieldset>
+                <br>
+                <fieldset>
+                <p>Quais newsletters você deseja assinar em checkboxes ?</p>
+                <ul>
+                    <li>
+                        <label for="opcao1">
+                            <input type="checkbox" id="opcao1" name="newsletters" value="Novidades"/> Novidades
+                        </label>
+                    </li>
+                    <li>
+                        <label for="opcao2">
+                            <input type="checkbox" id="opcao2" name="newsletters" value="Promocoes"/> Promoções
+                        </label>
+                    </li>
+                    <li>
+                        <label for="opcao3">
+                            <input type="checkbox" id="opcao3" name="newsletters"
+                            value="artigos"/> Artigos Técnicos
+                        </label>
+                    </li>
+            </fieldset>
+            <br>
+            <fieldset>
+            <p>Com que frequência você deseja receber as newsletters ?</p>
+            <select name="frequencia" id="freq">
+                <option value="diariamente">Diariamente</option>
+                <option value="semanalmente">Semanalmente</option>
+                <option value="mensalmente">Mensalmente</option>
+            </select>
+            </fieldset>
+            <br>
+            <fieldset>
+                <p>Como poderíamos melhorar nossos serviços ?</p>
+                <label for="descricao"></label>
+                <textarea name="descricao" id="descricao" cols="50" rows="4"></textarea>
+            </fieldset>
+            <li class="button">
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+            </li>
+        </ul>
+    </form>
+    <hr>
+    <h1>Novo Formulário</h1>
+    <form>
+        <fieldset>
+          <legend>Informações Pessoais</legend>
+        <ul>
+            <li>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            </li>
+            <li>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" required> 
+            </li>
+            <li>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" pattern="[0-9]{10}" placeholder="Apenas números" required>
+            </li>
+            <li>
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" min="18" max="99" required>
+            </li>
+            <li>
+                <label for="urgencia">Nível de Urgência (1-10):</label>
+                <input type="range" id="urgencia" name="urgencia" min="1" max="10">
+            </li>
+            <li>
+                <label for="data-nascimento">Data de Nascimento:</label>
+                <input type="date" id="data-nascimento" name="data-nascimento">
+            </li>
+            <li>
+                <label for="horario-preferencial">Horário Preferencial:</label>
+                <input type="time" id="horario-preferencial" name="horario-preferencial">
+            </li>
+            <li>
+                <label for="cor-tema">Cor de Tema:</label>
+                <input type="color" id="cor-tema" name="cor-tema">
+            </li>
+            <li>
+                <label for="idade-output">Idade:</label>
+                <input type="number" id="idade-output" name="idade-output">
+                <output for="idade-output"></output>
+            </li>
+        </ul>
+        </fieldset>
+      </form>
+    
+</body>
+</html>
